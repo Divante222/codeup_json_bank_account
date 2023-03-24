@@ -12,6 +12,7 @@ def main_menu():
                             'Enter 4 to add new account\n'
                             'Enter 5 to view transaction_history\n'
                             'Enter 6 to Exit\n'
+                            'REMEMBER ENTER YOUR FULL NAME WITH A SPACE IN BETWEEN\n'
                             '=======================\n')
         if user_choice == '1':
             view_balance()
@@ -62,7 +63,7 @@ def add_money():
                     print('You did no input the correct amount please try again')
                 
             the_amount_to_append = float(data[0].get(search_name)) + float(money_to_add)
-            print('You have', the_amount_to_append,'dollars in your account')
+            print('You have', round(the_amount_to_append),'dollars in your account')
             data[0][search_name] = round(the_amount_to_append,2)
 
             x = '1'
@@ -121,7 +122,7 @@ def withdraw_money():
                     print('You did no input the correct amount please try again')
                 
             the_amount_to_append = float(data[0].get(search_name)) - float(money_to_add)
-            print('You have', the_amount_to_append,'dollars in your account')
+            print('You have', round(the_amount_to_append),'dollars in your account')
             data[0][search_name] = round(the_amount_to_append,2)
 
             x = '1'
