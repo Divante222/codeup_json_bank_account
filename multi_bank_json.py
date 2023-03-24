@@ -63,7 +63,7 @@ def add_money():
                 
             the_amount_to_append = float(data[0].get(search_name)) + float(money_to_add)
             print('You have', the_amount_to_append,'dollars in your account')
-            data[0][search_name] = the_amount_to_append
+            data[0][search_name] = round(the_amount_to_append,2)
 
             x = '1'
             while x == '1':
@@ -122,7 +122,7 @@ def withdraw_money():
                 
             the_amount_to_append = float(data[0].get(search_name)) - float(money_to_add)
             print('You have', the_amount_to_append,'dollars in your account')
-            data[0][search_name] = the_amount_to_append
+            data[0][search_name] = round(the_amount_to_append,2)
 
             x = '1'
             while x == '1':
